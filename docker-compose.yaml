@@ -23,6 +23,8 @@ services:
       - "5432:5432"
     env_file:
       - env/postgres.env
+    volumes:
+      - db_data:/var/lib/postgresql/data
 
 
   composer:
@@ -38,3 +40,6 @@ services:
     volumes:
       - ./src:/var/www/laravel
     entrypoint: ["php", "/var/www/laravel/artisan"]
+
+volumes:
+  db_data:
