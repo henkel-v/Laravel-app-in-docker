@@ -5,7 +5,7 @@
 
 ```bash
 laravel-app-dockerized/
-├── docker
+├── docker/
 │   ├── dockerfiles/
 │   │   ├── composer.Dockerfile
 │   │   └── php.Dockerfile
