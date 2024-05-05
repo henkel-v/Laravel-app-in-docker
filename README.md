@@ -5,9 +5,14 @@
 
 ```bash
 laravel-app-dockerized/
-├── dockerfiles/
-│   ├── composer.Dockerfile
-│   └── php.Dockerfile
+├── docker
+│   ├── dockerfiles/
+│   │   ├── composer.Dockerfile
+│   │   └── php.Dockerfile
+│   └── php/
+│       └── conf.d/
+│           ├── error_reporting.ini
+│           └── xdebug.ini
 ├── env/
 │   └── postgres.env
 ├── nginx/
