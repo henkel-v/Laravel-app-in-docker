@@ -1,7 +1,7 @@
-# Laravel-приложение в docker-контейнерах
-Этот проект представляет собой контейнеризированное приложение Laravel, готовое к использованию с помощью Docker. 
+# Laravel application in docker containers
+This project is a containerised Laravel application ready to use with Docker. 
 
-## **Структура проекта**
+## **Project structure**
 
 ```bash
 laravel-app-dockerized/
@@ -20,53 +20,54 @@ laravel-app-dockerized/
 └── docker-compose.yaml
 ```
 
-- **dockerfiles/**: Директория, содержащая Docker-файлы для компонента Composer и PHP.
-- **env/**: Директория, где находится файл с переменными окружения для PostgreSQL.
-- **nginx/**: Директория с конфигурационным файлом Nginx.
-- **docker-compose.yaml**: Файл, определяющий структуру и настройки Docker-контейнеров.
+- **dockerfiles/**: The directory containing the Docker files for the Composer component and PHP.
+- **env/**: The directory where the file with environment variables for PostgreSQL is located.
+- **nginx/**: The directory with the Nginx configuration file.
+- **docker-compose.yaml**: A file that defines the structure and settings of Docker containers.
 
-## **Запуск приложения**
+## **Launching an application**
 
-1. Убедитесь, что у вас установлен Docker и Docker Compose.
-2. Клонируйте репозиторий на локальную машину:
+1. Make sure you have Docker and Docker Compose installed.
+2. Clone the repository to your local machine:
     
     ```bash
     git clone git@github.com:jibunnoeiko/Laravel-app-in-docker.git
     ```
     
-3. Перейдите в директорию проекта:
+3. Navigate to the project directory:
     
     ```bash
     cd laravel-app-dockerized
     ```
-5. Запустите приложение с помощью Docker Compose:
+5. Build the application using Docker Compose:
     
     ```css
     docker-compose up nginx -d --build
     ```
     
-6. После успешного запуска, приложение будет доступно по адресу http://localhost/8000.
+6. After successful launch, the application will be available at http://localhost/8000
 
-## **Дополнительные настройки**
 
-- **Настройка Базы Данных**: Если требуется изменить настройки базы данных PostgreSQL, отредактируйте файл **`postgres.env`** в директории **`env/`**.
-- **Настройка Nginx**: При необходимости измените конфигурацию в файле **`nginx.conf`** в директории **`nginx/`**.
-- **Другие настройки**: Дополнительные настройки Docker и Laravel можно произвести в соответствующих файлах Docker-композиции и конфигурационных файлах Laravel.
+## **Additional Settings**
 
-## **Остановка приложения**
+- **Database Settings**: If you want to change the PostgreSQL database settings, edit the **`postgres.env`** file in the **`env/`** directory.
+- **Nginx Configuration**: If necessary, change the configuration in the **`nginx.conf`** file in the **`nginx/`** directory.
+- **Other Settings**: Additional Docker and Laravel customisations can be made in the respective Docker composition files and Laravel configuration files.
 
-Для остановки приложения выполните следующую команду:
+## **Stop Application**
+
+To stop the application, run the following command:
 
 ```
 docker-compose down
 ```
 
-Это остановит и удалит контейнеры, созданные для приложения.
+This will stop and delete the containers created for the application.
 
-## **Важно**
+## **Important**
 
-- Перед запуском убедитесь, что порты, используемые приложением, не заняты другими процессами.
-- Не забудьте выполнить миграции и настройку Laravel после запуска контейнеров, если это необходимо.
-- Не забываем установить зависимости 
+- Before launching, make sure that the ports used by the application are not occupied by other processes.
+- Don't forget to perform Laravel migrations and configuration after running the containers, if necessary.
+- Don't forget to install dependencies 
 
 ---
