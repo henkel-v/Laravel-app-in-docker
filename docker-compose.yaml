@@ -1,5 +1,3 @@
-version: "2.27.0"
-
 services:
   nginx:
     image: "nginx:stable-alpine"
