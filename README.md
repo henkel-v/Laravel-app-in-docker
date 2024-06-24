@@ -1,3 +1,4 @@
+![image](https://github.com/henkel-v/Laravel-app-in-docker/assets/62598594/b35b3b84-a5fc-48c4-84ff-9b10ac08ece3)
 # Laravel application in docker containers
 This project is a containerised Laravel application ready to use with Docker. 
 
